@@ -23,6 +23,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import org.slf4j.*;
 
 public class AutoGUITest {
 	
@@ -451,6 +452,17 @@ public class AutoGUITest {
 		sb.append(String.format("%02d", millis));
 		return sb.toString();
 
+	}
+	
+	public static void main(String[] args) throws IOException, InterruptedException {
+		
+		AutoGUITest agt = new AutoGUITest();
+		
+		agt.allPageTest();
+		agt.imgToPdf();
+		agt.getDuration(du);
+		
+		
 	}
 
 }
